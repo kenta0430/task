@@ -1,0 +1,163 @@
+html {
+    scroll-behavior: smooth;
+}
+li {
+    cursor: pointer;
+    width: 120px;
+}
+li:hover {
+    text-decoration: underline;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#main{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* overflow: auto; */
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+#menu {
+    color: white;
+    background-color: deepskyblue;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 100px;
+    min-width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+#main.menu-open {
+    top: 100px;
+}
+
+.header {
+    height: 100px;
+    margin: 15px 0;
+}
+.header h1 {
+    font-size: 50px;
+    background-color: burlywood;
+    text-align: center;
+    line-height: 100px;
+}
+.fa {
+    font-size: 30px;
+    
+}
+#open {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.information {
+    height: 600px;
+    margin: 15px 0;
+    background-image: url("img/soccer.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.information p {
+    font-size: 30px;
+    position: absolute;
+    left: 55%;
+}
+.name {
+    top: 20%;
+}
+.birthday {
+    top: 30%;
+}
+.constellation {
+    top: 40%;
+}
+.hobby {
+    top: 50%;
+}
+.photo {
+    top: 60%;
+}
+
+#history {
+    height: 600px;
+    margin: 15px 0;
+}
+#history h3 {
+    color: chartreuse;
+    text-align: center;
+    font-size: 30px;
+}
+.school{
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+}
+.content {
+    font-size: 18px;
+    line-height: 15px;
+    padding: 1px 80px;
+}
+
+#current {
+    height: 200px;
+    margin: 15px 0;
+}
+#current h3 {
+    color: chartreuse;
+    text-align: center;
+    font-size: 30px;
+}
+#current p {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.footer {
+    height: 100px;
+    background-color: darkgray;
+    position: relative;
+}
+.mail-address {
+    font-size: 18px;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
+.year {
+    font-size: 30px;
+    text-align: center;
+    line-height: 165px;
+    opacity: .5;
+}
+
+#top {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    cursor: pointer;
+}
+
+
+@media(max-width:1000px) {
+    #history {
+        height: 700px;
+    }
+    #current {
+        height: 300px;
+    }
+}

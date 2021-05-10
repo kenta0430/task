@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width",initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自己紹介</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="self_introduction.css">
+</head>
+<body>
+   <div id="menu">
+        <ul>
+             <li id="history-btn">入社までの歴史</li>
+             <li id="current-btn">現在</li>
+        </ul>
+   </div>  
+ <div id="main">    
+   <div class="header"> 
+        <i class="fa fa-angle-down" id="open"></i>
+        <h1>自己紹介</h1>
+   </div>
+   
+   <div class="information">
+        <p class="name">名前：中村健太</p>
+        <p class="birthday">生年月日：1998年4月30日</p>
+        <p class="constellation">星座：牡牛座</p>
+        <p class="hobby">趣味：サッカー、ゲーム</p>
+        <p class="photo">写真は高校時代のサッカー部の写真です</p>
+   </div>
+
+   <div id="history">
+        <h3>入社までの歴史</h3>
+        <p class="school">小学校：新潟県村上市立瀬波小学校</p>
+        <p class="content">小学校２年生からサッカーを始めました。</p>
+        <p class="content">３年生からはサッカーと並行して、水泳も始めました。その後、一番上の１級を取得し、６年生で辞めました。</p>
+        <p class="school">中学校：新潟県村上市立村上第一中学校</p>
+        <p class="content">サッカー部に入部し、２年生の夏にポジション変更をして、さらにサッカーの面白さを感じ、世界が広がりました。</p>
+        <p class="content">３年生では、目標だった北信越大会出場には一歩届かずでしたが、県大会３位という、史上最高記録で終わることができました。</p>
+        <p class="school">高校：新潟県立村上高等学校</p>
+        <p class="content">中学校に引き続き、サッカー部に入部しました。中学時代より良い成績は残せなかったですが、厳しい練習に耐え、</p><p class="content">信頼しあえるチームメイトと過ごした３年間はとても楽しく、充実した日々でした。</p>
+        <p class="school">大学：大東文化大学　経営学部・経営学科</p>
+        <p class="content">大学からはサークルも入らず、ずっと続けてきたサッカーもやる機会が減ってしまいました。</p>
+        <p class="content">勉強面は、２年生からコースが分かれていて、私は会計コースに進みました。</p>
+        <p class="content">そこで勉強していた簿記が少し面白いと感じたので、資格を取ろうと思い２年生の６月に３級、１１月に２級を取得することができました。</p>
+   </div>
+
+   <div id="current">
+        <h3>現在</h3>
+        <p>フォース株式会社の中村健太と申します。未経験入社ですが、自分の強みでもある継続力、粘り強さを生かして経験者の人にも引けを取らないエンジニアになれるように頑張ります。趣味はサッカーと、インドアな部分もあるのでゲーム・漫画・アニメも大好きです。特に今は、原神というゲームと、東京リベンジャーズというアニメが好きです。他にも、部屋のレイアウトを考えたり、料理をするのも好きなので気になる物があったらチェックしたり、自分の好きな料理を作ったりして過ごしています。</p>
+   </div>
+
+   <div class="footer">
+        <p class="mail-address">メールアドレス：kenta.nakamura@force-corp.co.jp</p>
+        <p class="year">@2021 中村健太</p>
+        <i class="fa fa-angle-double-up" id="top" onclick="scrollToTop()"></i>
+   </div>
+ </div>
+   <script>
+        "use strict";
+
+          const open = document.getElementById("open");
+          const main = document.getElementById("main");
+
+          open.addEventListener("click", () => {
+               if(main.className === "menu-open"){
+                    main.className = "";
+               } else {
+                    main.className = "menu-open";
+               }
+          });
+
+          document.getElementById("history-btn").addEventListener("click", () => {
+               if(main.className === "menu-open"){
+                    main.className = "";
+               } else {
+                    main.className = "menu-open";
+               }
+          });
+
+          document.getElementById("current-btn").addEventListener("click", () => {
+               if(main.className === "menu-open"){
+                    main.className = "";
+               } else {
+                    main.className = "menu-open";
+               }
+          });
+
+          function scrollToTop() {
+               scrollTo(0,0);
+          }
+
+          window.addEventListener("load", (event) => {
+               document.getElementById("history-btn").addEventListener("click", () => {
+                    const history = document.getElementById("history");
+                    const content_position = history.getBoundingClientRect();
+                    window.scrollTo(0,770);
+               });
+          });
+
+          window.addEventListener("load", (event) => {
+               document.getElementById("current-btn").addEventListener("click", () => {
+                    const current = document.getElementById("current");
+                    const content_position = current.getBoundingClientRect();
+                    window.scrollTo(0,content_position.top);
+               });
+          });
+   </script>
+</body> 
+</html>
